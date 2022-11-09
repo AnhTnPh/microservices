@@ -24,12 +24,12 @@
 	display: block;
 	position: absolute;
 	transform: translate(-50%,-50%);
-	animation: heart 1.5s ease infinite
+	animation: heart 1.4s ease infinite
 }
 
 @keyframes heart {
 	80% {
-		transform: translate(-50%,-50%) scale(.8,.8)
+		transform: translate(-60%,-60%) scale(.7,.7)
 	}
 	100% {
 		transform: translate(-50%,-50%) scale(1,1)
@@ -90,11 +90,11 @@ var settings = {
 
   particles: {
 
-    length:   500, // maximum amount of particles
+    length:   800, // maximum amount of particles
 
-    duration:   2.5, // particle duration in sec
+    duration:   3, // particle duration in sec
 
-    velocity: 150, // particle velocity in pixels/sec
+    velocity: 100, // particle velocity in pixels/sec
 
     effect: -0.5, // play with this for a nice effect
 
@@ -209,13 +209,13 @@ var Particle = (function() {
 
   Particle.prototype.update = function(deltaTime) {
 
-    this.position.x += this.velocity.x * deltaTime;
+    this.position.x += this.velocity.x*1.8 * deltaTime;
 
-    this.position.y += this.velocity.y * deltaTime;
+    this.position.y += this.velocity.y*1.8 * deltaTime;
 
-    this.velocity.x += this.acceleration.x * deltaTime;
+    this.velocity.x += this.acceleration.x*1.8 * deltaTime;
 
-    this.velocity.y += this.acceleration.y * deltaTime;
+    this.velocity.y += this.acceleration.y*1.8 * deltaTime;
 
     this.age += deltaTime;
 
@@ -444,17 +444,13 @@ var ParticlePool = (function() {
       point = to(t);
 
       context.lineTo(point.x, point.y);
-
     }
-
-    context.closePath();
-
+    
     // create the fill
-
-    context.fillStyle = '#ea80b0';
-    // context.fillStyle = '#aa2400';
-
+    context.fillStyle = '#f01123';
     context.fill();
+    context.closePath();
+    
 
     // create the image
 

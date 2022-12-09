@@ -1,0 +1,40 @@
+
+host:
+  eureka: localhost
+  mysql: 127.0.0.1
+server:
+  port: 8595
+  servlet:
+    context-path: /fu-auth
+
+spring:
+  application:
+    name: fu-auth
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:mysql://${host.mysql}:3306/fu_auth?useSSL=false&serverTimezone=UTC&autoReconnect=true
+    username: root
+    password: Honhatdao1
+  jpa:
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${host.eureka}:8590/eureka/
+
+  instance:
+    appname: ${spring.application.name}
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}
+    client:
+      registryFetchIntervalSeconds: 5
+      serviceUrl:
+        defaultZone: ${host.eureka}/eureka/

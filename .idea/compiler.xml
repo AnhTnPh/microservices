@@ -10,11 +10,20 @@
         <module name="EurekaServer" />
         <module name="GateWayServer" />
         <module name="fu-auth" />
+      </profile>
+      <profile name="Annotation profile for fu-crm" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.3.Final/mapstruct-processor-1.5.3.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.3.Final/mapstruct-1.5.3.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar" />
+        </processorPath>
         <module name="fu-crm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="demo" target="1.8" />
       <module name="EurekaServer" target="1.8" />
       <module name="fu-auth" target="1.8" />
       <module name="fu-crm" target="1.8" />
@@ -25,7 +34,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="EurekaServer" options="-parameters" />
       <module name="GateWayServer" options="-parameters" />
-      <module name="demo" options="-parameters" />
       <module name="fu-auth" options="-parameters" />
       <module name="fu-crm" options="-parameters" />
     </option>

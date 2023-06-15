@@ -22,11 +22,12 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build().apiInfo(apiEndPointsInfo());
     }
-    private ApiInfo apiEndPointsInfo() {
 
+    private ApiInfo apiEndPointsInfo() {
+        /* http://localhost:8594/fu-crm/swagger-ui/ */
         return new ApiInfoBuilder().title("Spring Boot REST API")
-                .description("IntFace Backend REST API")
-                .contact(new Contact("Tran Nam Anh", "https://github.com/truonglx-56", "truonglx@intlabs.com"))
+                .description("Farmer Backend REST API")
+                .contact(new Contact("Tran Nam Anh", "https://github.com/AnhTnPh", "anhtnph06685@gmail.com"))
                 .license("fu 1.0")
                 .licenseUrl("https://www.fu.vn")
                 .version("1.0.0")

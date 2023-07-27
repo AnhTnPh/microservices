@@ -12,4 +12,6 @@ public interface NewsService {
     Optional<News> findById(Long id);
     void delete(Long id);
     List<NewsDTO> findAll();
+
+    Integer convertUSDToVND(int usd);
 }

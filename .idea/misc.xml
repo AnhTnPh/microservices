@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/fu-crm/pom.xml" />
         <option value="$PROJECT_DIR$/fu-auth/pom.xml" />
         <option value="$PROJECT_DIR$/EurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/fu-config/pom.xml" />
       </list>
     </option>
   </component>

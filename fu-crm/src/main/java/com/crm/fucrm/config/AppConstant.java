@@ -9,5 +9,7 @@ public class AppConstant {
         public static final String DELETE = "/delete/{id}";
         public static final String FIND_BY_ID = "/find-by-id/{id}";
         public static final String FIND_ALL = "/find-all";
+
+        public static final String CONVERT = "/usd-to-vnd";
     }
 }

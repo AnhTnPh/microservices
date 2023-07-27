@@ -10,6 +10,7 @@
         <module name="EurekaServer" />
         <module name="GateWayServer" />
         <module name="fu-auth" />
+        <module name="fu-config" />
       </profile>
       <profile name="Annotation profile for fu-crm" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -26,6 +27,7 @@
     <bytecodeTargetLevel>
       <module name="EurekaServer" target="1.8" />
       <module name="fu-auth" target="1.8" />
+      <module name="fu-config" target="1.8" />
       <module name="fu-crm" target="1.8" />
       <module name="GateWayServer" target="1.8" />
     </bytecodeTargetLevel>
@@ -35,6 +37,7 @@
       <module name="EurekaServer" options="-parameters" />
       <module name="GateWayServer" options="-parameters" />
       <module name="fu-auth" options="-parameters" />
+      <module name="fu-config" options="-parameters" />
       <module name="fu-crm" options="-parameters" />
     </option>
   </component>

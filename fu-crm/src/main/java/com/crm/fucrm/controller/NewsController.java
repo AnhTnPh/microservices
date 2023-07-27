@@ -43,4 +43,9 @@ public class NewsController {
     public ResponseEntity<List<NewsDTO>> findAll() {
         return ResponseEntity.ok(newsService.findAll());
     }
+
+    @PostMapping(AppConstant.News.CONVERT)
+    public ResponseEntity<Integer> convertUSDToVND(@RequestBody int usd) {
+        return ResponseEntity.ok(newsService.convertUSDToVND(usd));
+    }
 }

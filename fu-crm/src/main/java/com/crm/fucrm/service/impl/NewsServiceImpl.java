@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -63,5 +64,16 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public List<NewsDTO> findAll() {
         return newsMapper.toDtoS(newsRepository.findAll());
+    }
+
+    @Override
+    public Integer convertUSDToVND(int usd) {
+        int result = 0;
+        try {
+            if (usd != 0) result = 23000 * usd;
+        } catch (Exception ex) {
+            log.error("convert usd to vnd: {}", ex);
+        }
+        return result;
     }
 }

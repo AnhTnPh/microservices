@@ -8,6 +8,8 @@ server:
     context-path: /fu-auth
 
 spring:
+  main:
+    allow-circular-references: true
   application:
     name: fu-auth
   mvc:

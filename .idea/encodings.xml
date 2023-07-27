@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/EurekaServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GateWayServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fu-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fu-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fu-config/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fu-crm/src/main/java" charset="UTF-8" />
   </component>
 </project>

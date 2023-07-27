@@ -1,3 +1,11 @@
+# map path service
+zuul:
+  routes:
+    auth-service:
+      path: /fu-auth/**
+      service-id: fu-auth
+      strip-prefix: false
+      sensitive-headers: Cookie, Set-Cookie
 host:
   eureka: localhost
 server:
